@@ -54,6 +54,93 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	border: 1px black;
+	//background-color: red;
 }
+
+
+
+
+
+// Variables
+@main-bg:         gray;
+@custom-color:    white;
+@company-red:     red;
+
+// Mixins
+.bordered() {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-layout(@justify, @align) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.example() {
+  color: blue;
+}
+
+.another-mixin() {
+  .bordered;
+  .example;
+}
+
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
+// General Styles
+* {
+  .box-sizing();
+}
+
+h1, h2, h3 {
+  margin: 15px 0;
+}
+
+h1 {
+  font-size: 30px;
+  color: @custom-color;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: @main-bg;
+  padding: 20px;
+}
+
+header {
+  .custom-layout(space-between, center);
+}
+
+.main-content {
+  line-height: 1.25;
+  .another-mixin;
+
+
+  h2 {
+    font-size: 30px;
+
+    span {
+      color: red;
+    }
+  }
+}
+
+
 
