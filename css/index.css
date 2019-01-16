@@ -175,52 +175,25 @@ header {
   color: black;
 }
 
-button {
-  background: white;
-  vertical-align: center;
-  margin-top: 6px;
-  padding: 8px 44px;
-  font-size: 17px;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-button:hover {
-  background: black;
-  color: white;
-}
-
-
-.layout-example {
-  width: 600px;
+/* Responsive */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
   border: 1px solid red;
+  padding: 20px 1.25%;
 }
 
-.layout-example .main-layout {
-  width: 400px;
-  display: inline-block;
-  border: 1px solid purple;
+@media(max-width: 500px) {
+  .container {
+    background: whitesmoke;
+  }
 
+  .container header nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container header nav a {
+    margin-bottom: 20px;
+  }
 }
-
-.layout-example aside {
-  width: 190px;
-  display: inline-block;
-  border: 1px solid green;
-  border-bottom: 1px black;
-}
-
-/* table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-} */
-
-
-
-
