@@ -18,7 +18,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
-	padding: 0;
+	padding: 5px;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -64,9 +64,9 @@ html, body {
 
 
 // Variables
-@main-bg:         gray;
-@custom-color:    white;
-@company-red:     red;
+@main-bg:         lightgray;
+@custom-color:    magenta;
+@company-red:     black;
 
 // Mixins
 .bordered() {
@@ -89,7 +89,7 @@ html, body {
 }
 
 .example() {
-  color: blue;
+  color: black;
 }
 
 .another-mixin() {
@@ -137,7 +137,7 @@ header {
     font-size: 30px;
 
     span {
-      color: red;
+      color:black;
     }
   }
 }
